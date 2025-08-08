@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Create Bank Account">
+        <lightning-input label="Account Holder Name" value={name} onchange={handleNameChange}></lightning-input>
+        <lightning-combobox
+            label="Account Type"
+            options={accountTypes}
+            value={accountType}
+            onchange={handleTypeChange}>
+        </lightning-combobox>
+        <lightning-input type="number" label="Initial Balance" value={balance} onchange={handleBalanceChange}></lightning-input>
+
+        <lightning-button label="Create Account" onclick={createAccount} class="slds-m-top_small"></lightning-button>
+    </lightning-card>
+</template>

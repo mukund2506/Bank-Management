@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Transaction History">
+        <lightning-input label="Account Id" value={accountId} onchange={handleAccountIdChange}></lightning-input>
+        <lightning-button label="Load Transactions" onclick={loadTransactions}></lightning-button>
+
+        <template if:true={transactions}>
+            <lightning-datatable
+                key-field="Id"
+                data={transactions}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

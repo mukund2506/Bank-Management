@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Bank Accounts">
+        <template if:true={accounts}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}
+            ></lightning-datatable>
+
+            <lightning-input label="Account Id" value={accountId} onchange={handleAccountIdChange}></lightning-input>
+            <lightning-input type="number" label="Amount" value={amount} onchange={handleAmountChange}></lightning-input>
+
+            <lightning-button label="Deposit" onclick={handleDeposit} class="slds-m-top_small"></lightning-button>
+            <lightning-button label="Withdraw" onclick={handleWithdraw} class="slds-m-top_small"></lightning-button>
+        </template>
+    </lightning-card>
+</template>
